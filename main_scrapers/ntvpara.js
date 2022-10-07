@@ -13,7 +13,7 @@ const ntvPara = new Promise((resolve, reject) => {
 				const title = $(this).find("a").attr("title");
 				const url = $(this).find("a").attr("href");
 				const img = $(this).find("a").find("img").attr("data-src");
-				if (url.split("/")[1] != "galeri") {
+				if (url.split("/").length == 3) {
 					articles.push({ title, url, img });
 				}
 			});
